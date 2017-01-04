@@ -40,7 +40,7 @@ public class CollectionsInJava7 {
 			}
 		});
 		
-		// With Labda: printLastNameConditionally(personList, (p) -> p.getLastName().startsWith("C"));
+		// With Lambda: printLastNameConditionally(personList, (p) -> p.getLastName().startsWith("C"));
 		
 	}
 

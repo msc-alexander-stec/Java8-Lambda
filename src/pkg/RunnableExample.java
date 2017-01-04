@@ -15,7 +15,8 @@ public class RunnableExample {
 		myThread.run();
 		
 		// Neuer Weg
-		Thread myLambdaThread = new Thread(() -> System.out.println("Runnable Lambda"));
+		Runnable runnable = () -> System.out.println("Runnable Lambda");
+		Thread myLambdaThread = new Thread(runnable);
 		myLambdaThread.run();
 	}
 }
