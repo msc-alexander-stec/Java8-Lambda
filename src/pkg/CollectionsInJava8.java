@@ -4,6 +4,7 @@ import java.util.Arrays;
 import java.util.Collections;
 import java.util.Comparator;
 import java.util.List;
+import java.util.function.Predicate;
 
 public class CollectionsInJava8 {
 
@@ -27,6 +28,13 @@ public class CollectionsInJava8 {
 		// Step 3: Create a method that prints all persons that have last name beginning with C
 		Condition condition = (p) -> p.getLastName().startsWith("C");
 		printLastNameConditionally(personList, condition);
+		
+		System.out.println();
+		
+		// Alternative: Using existing Functional Interface from Java 8
+		// See: https://docs.oracle.com/javase/8/docs/api/java/util/function/package-summary.html
+		Predicate<Person> predicate = (p) -> p.getLastName().startsWith("C");
+		printLastNameConditionally2(personList, predicate);
 	}
 
 	private static void printAll(List<Person> personList) {
@@ -43,10 +51,18 @@ public class CollectionsInJava8 {
 		}
 	}
 	
+	// With existing Java Function Interfaces
+	private static void printLastNameConditionally2(List<Person> personList, Predicate<Person> predicate) {
+		for(Person p: personList) {
+			if (predicate.test(p)) {
+				System.out.println(p);
+			}
+		}
+	}
+	
+	@FunctionalInterface
 	interface Condition {
 		boolean test(Person p);
 	}
-	
-	// End 1
 
 }
