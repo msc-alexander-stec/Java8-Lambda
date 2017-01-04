@@ -44,7 +44,5 @@ public class CollectionsInJava8 {
 	interface Condition {
 		boolean test(Person p);
 	}
-	
-	// End
 
 }
