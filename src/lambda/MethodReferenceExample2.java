@@ -1,4 +1,4 @@
-package pkg;
+package lambda;
 
 import java.util.Arrays;
 import java.util.Collections;
@@ -7,7 +7,7 @@ import java.util.List;
 import java.util.function.Consumer;
 import java.util.function.Predicate;
 
-import pkg.CollectionsInJava8.Condition;
+import lambda.CollectionsInJava8.Condition;
 
 public class MethodReferenceExample2 {
 

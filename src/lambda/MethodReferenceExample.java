@@ -1,4 +1,4 @@
-package pkg;
+package lambda;
 
 public class MethodReferenceExample {
 
