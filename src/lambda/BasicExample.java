@@ -1,5 +1,6 @@
 package lambda;
 
+// Basic Lambdas
 public class BasicExample {
 
 	public static void main(String[] args) {
